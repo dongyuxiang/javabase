@@ -21,10 +21,14 @@ public class Loop2 {
 			System.out.println("我是do while循环的第"+(i+1)+"次循环");
 			i++;
 		}while(i<num);
+		
 	}
 	public static void stringDemo(){
 		String[] str={"aa","bb","cc"};
-		for(String string:str){
+		for(String string:str){		
+/*			1.String：表示你要遍历的集合的类型
+			2.str：表示你要遍历的集合名
+			3.string:表示你每遍历一个元素，便存储到该变量中，然后在foreach语句的{}使用string变量*/
 			System.out.println("元素的数组位"+string);
 		}
 	}
@@ -44,6 +48,4 @@ public class Loop2 {
 		System.out.println("----------------------------");
 		stringDemo();
 		}
-
-
 }
