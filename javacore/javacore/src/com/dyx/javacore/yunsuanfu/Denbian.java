@@ -15,15 +15,16 @@ public class Denbian {
 		Scanner sc=new Scanner(System.in);
 		System.out.print("请输出等腰三角形的高:");
 		int num=sc.nextInt();
-		System.out.println("三角形底边长度为："+((2*num)-1));
-		for (int i = 1; i <=num; i++) {	
-			for(int j=i;j<num;j++){
-				System.out.print(" ");
+//		System.out.println("三角形底边长度为："+((2*num)-1));
+		for (int y= 1; y<=num; y++) {	
+			for(int x=1;x<=2*num-1;x++){
+				if((y>=num-x+1)&&(y>=x-num+1)){
+					System.out.print("*");
+				}
+				else
+					System.out.print(" ");
 			}
-			for(int k=1;k<=(2*i-1);k++){
-				System.out.print("*");
-			}
-			System.out.println("");
+			System.out.println();
 		}
 		/*	for(int z=0;z<=i;z++){
 				System.out.print("*");
@@ -34,5 +35,4 @@ public class Denbian {
 			System.out.println();
 		}*/
 	}
-
 }
