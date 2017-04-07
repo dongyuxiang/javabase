@@ -10,7 +10,8 @@ public class Person implements Serializable {
 		private int personId;
 		private String name;
 //		private String pass;
-		private transient String pass;
+		private transient String pass;//使用transient修饰的属性，不会被实例化
+		//功能，例如密码，工资，体重等隐私的东西不想让别人看到，可以使用Transient对其进行修饰
 		public Person(){
 		}
 		public Person(int personId,String name,String pass){//生成参数个数为3的构造函数
