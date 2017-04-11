@@ -13,5 +13,4 @@ public class MapDemo1 {
 		String name3=person.get(1);
 		System.out.println("the No.3 is:"+name3);
 	}
-
 }

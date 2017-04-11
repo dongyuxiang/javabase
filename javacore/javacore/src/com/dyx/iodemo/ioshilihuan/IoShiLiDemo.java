@@ -1,4 +1,4 @@
-package com.dyx.javacore1.ioshilihuan;
+package com.dyx.iodemo.ioshilihuan;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -2,7 +2,10 @@ package com.dyx.javacore.extendsdemo;
 
 import javax.swing.text.GapContent;
 
+import com.sun.corba.se.spi.orb.StringPair;
+
 public class Penguin extends Pet {
+
 	public Penguin(){
 		super();
 	}

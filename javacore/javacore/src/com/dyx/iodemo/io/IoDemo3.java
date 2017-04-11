@@ -1,4 +1,4 @@
-package com.dyx.javacore1.io;
+package com.dyx.iodemo.io;
 
 import java.beans.beancontext.BeanContext;
 import java.io.BufferedReader;

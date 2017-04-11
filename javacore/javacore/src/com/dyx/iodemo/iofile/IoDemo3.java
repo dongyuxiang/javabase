@@ -1,4 +1,4 @@
-package com.dyx.javacore1.iofile;
+package com.dyx.iodemo.iofile;
 
 import java.io.File;
 import java.io.IOException;
