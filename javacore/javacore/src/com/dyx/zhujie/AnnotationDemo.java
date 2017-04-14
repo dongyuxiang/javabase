@@ -12,15 +12,15 @@ public class AnnotationDemo {
 		Field[] fi=c1.getDeclaredFields();
 		for(Field fis:fi){
 			if(fis.isAnnotationPresent(SonName.class)){//判断Son中属性中有没有Default注解
-				SonName annotation=fis.getAnnotation(SonName.class);
-				System.out.println("SonName注解的值是:"+annotation.value());
+				SonName annotation=fis.getAnnotation(SonName.class);//如果有注解就利用getAnnotation方法取出注解
+				System.out.println("SonName注解的值是:"+annotation.value());//利用value打印注解
 				fis.setAccessible(true);
 				 fis.set(son,annotation.value());
 			}else if(fis.isAnnotationPresent(Default.class)){//判断Son中属性有没有SonName的注解
 				Default annotation1=fis.getAnnotation(Default.class);
 				System.out.println("Default注解的值是:"+annotation1.value());
 				fis.setAccessible(true);
-//				System.out.println(fis.getType().getSimpleName());
+			System.out.println(fis.getType().getSimpleName().toString());
 				switch (fis.getType().getSimpleName().toString()) {
 				case "Integer":		fis.set(son,Integer.valueOf(annotation1.value()));   break;
 				case "double":  fis.set(son, Double.valueOf(annotation1.value()));	 break;
@@ -32,5 +32,4 @@ public class AnnotationDemo {
 		System.out.println("注解后的值");
 		son.show();
 	}
-
 }

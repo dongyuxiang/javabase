@@ -47,6 +47,7 @@ public class FanSheDemo1 {
 		Field fname=c1.getDeclaredField("name");
 		Field fage=c1.getDeclaredField("age");
 		fname.setAccessible(true);
+		fname.set(obj, "小强");
 		System.out.println("fname.get(obj) :" + fname.get(obj));
 		fage.setAccessible(true);
 		System.out.println("fage.getobj():"+fage.get(obj));
