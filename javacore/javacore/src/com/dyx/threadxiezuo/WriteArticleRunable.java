@@ -7,7 +7,7 @@ public class WriteArticleRunable implements Runnable {
 	private boolean isRunning = true;
 	private int count = 20;// 循环次数
 
-	public WriteArticleRunable(Paper paper, Pen pen) {
+	public WriteArticleRunable(Paper paper, Pen pen) {//创建一个有参构造函数
 		super();
 		this.paper = paper;
 		this.pen = pen;
@@ -15,8 +15,8 @@ public class WriteArticleRunable implements Runnable {
 
 	@Override
 	public void run() {
-		while (isRunning) {
-			if (!paper.getIsPrivated()) {
+		while (isRunning) {//判断是否满足条件
+			if (!paper.getIsPrivated()) {//对设定的getIsPrinated值取反得到不被占有
 				paper.setIsPrivated(true);
 				paper.setOwner(Thread.currentThread().getName());
 			}
@@ -64,11 +64,9 @@ public class WriteArticleRunable implements Runnable {
 				}
 			}
 		}
-
 	}
 
 	public void stop() {
 		this.isRunning = false;
 	}
-
 }
